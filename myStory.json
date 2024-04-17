@@ -1,0 +1,187 @@
+{
+    "Title": "Cabin in the woods",
+    "Credits": "Created by Ela Golubkova (egolubko@ucsc.edu).",
+    "Inventory": [],
+    "InitialLocation": "Enter Forest",
+    "Locations": {
+        "Enter Forest": {
+            "Body": "You approach a trail that leads you into a forest.",
+            "Choices": [
+                {
+                    "Text": "Enter Forest",
+                    "Target": "Path"
+                }
+            ]
+        },
+        "Path": {
+            "Body": "You go on the path that has different directions.",
+            "Choices": [
+                {
+                    "Text": "East",
+                    "Target": "Tree With Sign"
+                },
+                {
+                    "Text": "West",
+                    "Target": "Trees1"
+                }
+            ]
+        },
+        "Tree With Sign": {
+            "Body": "You follow the path to find a wierd sign on a tree telling you to continue forward...",
+            "Choices": [
+                {
+                    "Text": "East",
+                    "Target": "Cabin"
+                },
+                {
+                    "Text": "West",
+                    "Target": "Path"
+                }
+            ]
+        },
+        "Cabin": {
+            "Body": "You approach a hidden cabin at the end of this path. There seems to be a note on the door.",
+            "Choices": [
+                {
+                    "Text": "North",
+                    "Target": "Trees2"
+                },
+                {
+                    "Text": "West",
+                    "Target": "Tree With Sign"
+                },
+                {
+                    "Text": "Investigate the note",
+                    "Target": "Note"
+                }
+            ],
+            "HiddenChoice":
+            {
+                "Text": "Unlock the door.",
+                "Target": "Story"
+            }
+        },
+        "Note": {
+            "Body": "The note looks beat up but you manage to read these words: 'The key to the cabin is hidden somewhere in this forest, if you can't solve my riddle LEAF me alone.'",
+            "Choices": [
+                {
+                    "Text": "Stop reading",
+                    "Target": "Cabin"
+                }
+            ]
+        },
+        "Trees2": {
+            "Body": "You continue on the path seeing nothing but trees.",
+            "Choices": [
+                {
+                    "Text": "South",
+                    "Target": "Cabin"
+                },
+                {
+                    "Text": "North",
+                    "Target": "River"
+                }
+            ]
+        },
+        "River": {
+            "Body": "You approach a small bridge that goes across a small river.",
+            "Choices": [
+                {
+                    "Text": "South",
+                    "Target": "Trees2"
+                },
+                {
+                    "Text": "West",
+                    "Target": "Trees3"
+                }
+            ]
+        },
+        "Trees3": {
+            "Body": "The forest is full of beautiful redwood trees you see on this path.",
+            "Choices": [
+                {
+                    "Text": "East",
+                    "Target": "River"
+                },
+                {
+                    "Text": "West",
+                    "Target": "Lake Right"
+                }
+            ]
+        },
+        "Lake Right": {
+            "Body": "You approach a beach of a beautiful lake on the east side of it, you seem to see another beach across the lake.",
+            "Choices": [
+                {
+                    "Text": "East",
+                    "Target": "Trees3"
+                }
+            ]
+        },
+        "Trees1": {
+            "Body": "This path seems to be full of endless trees.",
+            "Choices": [
+                {
+                    "Text": "East",
+                    "Target": "Path"
+                },
+                {
+                    "Text": "North",
+                    "Target": "Marked Tree"
+                }
+            ]
+        },
+        "Marked Tree": {
+            "Body": "You approach a tree that lookes different than other ones, it appears to have some kind of a mark.",
+            "Choices": [
+                {
+                    "Text": "South",
+                    "Target": "Trees1"
+                },
+                {
+                    "Text": "North",
+                    "Target": "Lake Left"
+                },
+                {
+                    "Text": "East",
+                    "Target": "Path With Leaves"
+                }
+            ]
+        },
+        "Path With Leaves": {
+            "Body": "There is nothing that is stiking out to you on this path except for the fact there is a big pile of leaves on the side.",
+            "Choices": [
+                {
+                    "Text": "Touch the Leaves",
+                    "Target": "Receive Key"
+                },
+                {
+                    "Text": "West",
+                    "Target": "Marked Tree"
+                }
+            ]
+        },
+        "Receive Key": {
+            "Body": "While digging through the leaves and the mud you seem to find something small.... It is a key!",
+            "Choices": [
+                {
+                    "Text": "Go back to the path",
+                    "Target": "Path With Leaves"
+                }
+            ],
+            "Object" : "Key"
+        },
+        "Lake Left": {
+            "Body": "You approach a beach of a beautiful lake on the west side of it, you seem to see another beach across the lake.",
+            "Choices": [
+                {
+                    "Text": "South",
+                    "Target": "Marked Tree"
+                }
+            ]
+        },
+        "Story": {
+            "Body": "You unlocked the beatiful cabin that looks alive like there are still people living in it despite it being abandoned. There is nothing of value you can take but there are many different notes scattered around for you to find and discover the history of this cabin!"
+        }
+    }
+}
